@@ -1,0 +1,59 @@
+1.Difference between “ == “ and “ === “ operators.
+== used for comp. two variable but it ignores the datatype of variable.
+=== is udes to comp. two variable but this operator also checks datatype and comp. two values
+exp:-
+0==false//true, because false is equivalent of 0
+0===false// false,because both operands are of different type
+
+2.What is the spread operator?
+spread operator that consists of three dots (...). The spread operator allows you to spread out elements of an iterable object such as an array, map, or set. 
+exp:-
+const odd = [1,3,5];
+const combined = [2,4,6, ...odd];
+console.log(combined);
+
+//[ 2, 4, 6, 1, 3, 5 ]
+
+3.What are the differences between var, let and const?
+var - it can be declared withour initialization
+let - it can be declared without initialization
+const - it cannot be declared without initization.
+
+4.What is execution context
+avaScript engine executes the JavaScript code, it creates execution contexts.
+Each execution context has two phases: the creation phase and the execution phase.
+exp:-
+let x = 10;
+
+function timesTen(a){
+    return a * 10;
+}
+
+let y = timesTen(x);
+
+console.log(y); // 100
+
+5.What is meant by first class functions
+the function can be assigned to any other variable or passed as an argument or can be reteturned by another function.
+exp:-
+const Arithmetics = {
+    add: (a, b) => {
+        return `${a} + ${b} = ${a + b}`;
+    }
+}
+document.write(Arithmetics.add(100, 100) + );//200
+
+
+6.What are closures?
+the combination of a function bundled together with references to its surrounding state
+exp:-
+function makeFunc() {
+    var name = 'hitesh';
+    function displayName() {
+      alert(name);
+    }
+    return displayName;
+  }
+  
+  var myFunc = makeFunc();
+  myFunc();
